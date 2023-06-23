@@ -16,7 +16,7 @@ const router = express.Router();
 router.post('/logout', requireJwtAuth, logoutController);
 router.post('/login', requireLocalAuth, loginController);
 // router.post('/refresh', requireJwtAuth, refreshController);
-if (process.env.ALLOW_REGISTRATION) {
+if (process.env.ALLOW_REGISTRATION === "true") {
   router.post('/register', registrationController);
 }
 router.post('/requestPasswordReset', resetPasswordRequestController);
