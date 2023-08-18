@@ -19,7 +19,7 @@ router.post('/login', requireLocalAuth, loginController);
 if (process.env.ALLOW_REGISTRATION === "true") {
   router.post('/register', registrationController);
 }
-router.post('/requestPasswordReset', resetPasswordRequestController);
-router.post('/resetPassword', resetPasswordController);
+// router.post('/requestPasswordReset', resetPasswordRequestController);
+// router.post('/resetPassword', resetPasswordController);
 
 module.exports = router;
